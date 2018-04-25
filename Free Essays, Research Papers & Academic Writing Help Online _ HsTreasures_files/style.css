@@ -66,7 +66,7 @@ body .overlay {
     border-bottom-width: 0;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
-    z-index: 1
+    z-index: 3;
 }
 
 .navbar .navbar-brand {
@@ -233,7 +233,6 @@ body .overlay {
 
 .header ul.menu > li {
     display: inline-block;
-    float: left;
     padding: 0 16px
 }
 
@@ -253,6 +252,130 @@ body .overlay {
     display: none
 }
 
+.search__toggle-wrap {
+    position: relative;
+}
+
+.search__toggle.show input {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s;
+    opacity: 1;
+}
+
+.overlay-s {
+    opacity: .8;
+    z-index: 2;
+}
+.overlay, .overlay-s {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+    background-color: #000;}
+
+.search__toggle form input {
+    width: 100%;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    border-bottom: solid 1px #979797;
+    padding-bottom: 15px;
+    opacity: 0;
+    line-height: 1;
+    font-size: 21px;
+    text-align: left;
+    color: #565656;
+    }  
+}
+
+
+
+.header ul.menu>li .indicator .fa-angle-down:after, .search__toggle-close-icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.search__toggle-close-icon {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    background-image: url(x.svg);
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    opacity: 1;
+    visibility: visible;
+}   
+
+.search__toggle .press-enter {
+    margin: 5px 0;
+    font-size: 13px;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+
+.search-box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 0;
+    min-height: 0;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    background-color: #fff;
+    max-height: 125px;
+    min-height: 125px;
+}
+
+.search__toggle.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search__toggle {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.show {
+    display: block !important;
+}
+
+.search-toggle {
+    background: url(//phdessay.com/wp-content/themes/theme/assets/img/dark.svg) 50% no-repeat;
+    background-size: 25px;
+}
+
+.search-toggle{
+ background: transparent;
+ border: none;
+ list-style: none;
+}
+ul.search{
+    margin: 15px 0px;
+    float: right;
+    padding: 0;
+}
+ul.search li{
+    list-style: none;
+}
 .header ul.menu > li > a {
     padding: 26px 0px;
     display: inline-block;
@@ -3536,3 +3659,24 @@ div.samurai__article-item {
 .central-block, .question{
     border-color: #3b95e680;
 }
+@media screen and (min-width: 768px){
+
+    .search-box {
+        max-height: 360px;
+        min-height: 360px;
+    }
+    .search__toggle form {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        margin: 0;
+    }
+    .search__toggle form {
+        width: 95%;
+        max-width: 750px;
+        margin: 25px 0;
+        }
+    }
