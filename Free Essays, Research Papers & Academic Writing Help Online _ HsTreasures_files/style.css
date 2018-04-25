@@ -341,6 +341,9 @@ body .overlay {
     max-height: 125px;
     min-height: 125px;
 }
+.search-box form{
+padding: 0 20px;
+}
 
 .search__toggle.show {
     opacity: 1;
