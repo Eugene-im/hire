@@ -361,13 +361,14 @@ body .overlay {
 .search-toggle {
     background: url(//phdessay.com/wp-content/themes/theme/assets/img/dark.svg) 50% no-repeat;
     background-size: 25px;
-}
-
-.search-toggle{
  background: transparent;
  border: none;
  list-style: none;
 }
+.search-toggle:focus,.search__toggle.show input {
+    outline: none;
+}
+
 ul.search{
     margin: 15px 0px;
     float: right;
